@@ -166,3 +166,8 @@ function whoIsPaying(name){
   if ( name.length > 2 ) arr.push(name.slice(0, 2));
   return arr;
 }
+//-----------------------------------------------------------------------------------------------
+
+function array(arr){
+  return arr.split(",").slice(1,-1).join(" ") || null;
+}
