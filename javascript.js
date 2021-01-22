@@ -361,3 +361,33 @@ function arrayMadness(a, b) {
     },0);
     return r1>r2 ? true : false;
 }
+//-----------------------------------------------------------------------------------------------
+
+function correctTail(bod, tail){
+return tail===bod.charAt(bod.length-1) ? true : false
+}
+const correctTail = (body, tail) => body.slice(-1) === tail[0]
+const correctTail = (x,y)=>x.endsWith(y)
+function correctTail(bod, tail) {
+  return bod[bod.length-1] === tail
+}
+
+//-----------------------------------------------------------------------------------------------
+//NOT SOLVED
+function solve(s, k){
+  var str="abcdefghijklmnopqrstuvwxyz";
+  var match=str[0];
+  for (let i=0;i<str.length;i++){
+    match=match.replace(match[0],str[i]);
+    //console.log(match);
+    check=s.includes(match[i]);
+    console.log(check)
+    if(s.includes(match[i])){
+      s=s.replace(s[s.indexOf(match[i])],"")
+    }
+  }
+  return s;
+
+  }
+
+  //-----------------------------------------------------------------------------------------------
